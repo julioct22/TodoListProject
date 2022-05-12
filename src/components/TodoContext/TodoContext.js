@@ -43,6 +43,17 @@ function TodoProvider(props){
     
       };  
 
+    //  VER ESTO MAÑANA 
+      const deleteAllTodo = (text) => {
+        const todoIndex = todos.findIndex(todo => todo.text === text);
+        const newTodos = [...todos];
+        newTodos.splice(todoIndex, 1);
+        saveTodos(newTodos);
+    
+      };  
+
+
+
       const addTodo = (text) => {
         const newTodos = [...todos];
         newTodos.push ({

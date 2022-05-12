@@ -1,6 +1,8 @@
 import React from "react";
 
 function EmptyTodos(){
-    return <p>Desespérate, hubo un error</p>
+   
+    return <p>Estamos cargando, no desesperes</p>
+
 }
 export{EmptyTodos};

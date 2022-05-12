@@ -1,6 +1,5 @@
 import React from "react";
 
 function TodosError(){
-    return <p>Estamos cargando, no desesperes</p>
-}
+    return <p>Desespérate, hubo un error</p>}
 export{TodosError};
