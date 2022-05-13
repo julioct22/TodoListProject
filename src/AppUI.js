@@ -10,7 +10,8 @@ import { TodoForm } from "./components/TodoForm/TodoForm";
 import { TodosError } from "./components/TodosError/TodosError";
 import { TodosLoading } from "./components/TodosLoading/TodosLoading";
 import { EmptyTodos } from "./components/EmptyTodos/EmptyTodos"
-
+import {DeleteAllTodoButton} from "./components/DeleteAllTodoButton/DeleteAllTodoButton"
+import {Footer} from './components/Footer/Footer'; 
   function AppUI() {
     const {
         error,
@@ -20,10 +21,14 @@ import { EmptyTodos } from "./components/EmptyTodos/EmptyTodos"
         deleteTodo,
         openModal,
         setOpenModal,
+        deleteAllTodo,
+        
+
       } = React.useContext (TodoContext)
 
     return (
     <React.Fragment>
+    <div className="contenedor">
     <TodoCounter/>
     <TodoSearch />
    
@@ -43,18 +48,25 @@ import { EmptyTodos } from "./components/EmptyTodos/EmptyTodos"
             ))}
           </TodoList>
 
+     
               {!!openModal&& (
                     <Modal>
                     <TodoForm/>
                   </Modal>
               )}
 
-    
+
+    <DeleteAllTodoButton
+      deleteAllTodo={deleteAllTodo}
+      
+    />
+
     <CreateTodoButton
       setOpenModal={setOpenModal}
       // openModal={openModal}
     />
-   
+    <Footer/>
+    </div>
   </React.Fragment>
      ); 
   }

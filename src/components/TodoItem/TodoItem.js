@@ -1,7 +1,9 @@
 import React from "react";
 import './TodoItem.css'
 import { IoCheckmarkSharp } from 'react-icons/io5';
-import { IoTrashSharp } from "react-icons/io5";
+// import { IoTrashSharp } from "react-icons/io5";
+import { TiDelete } from "react-icons/ti";
+
 
 function TodoItem(props){
 
@@ -9,6 +11,7 @@ function TodoItem(props){
 
 
     return (
+        
         <li className="TodoItem">
         <span 
        
@@ -23,9 +26,10 @@ function TodoItem(props){
           className="Icon Icon-delete"
           onClick={props.onDelete}
           >
-          < IoTrashSharp />
-        </span>
+          < TiDelete />
+          </span>
       </li>
+      
     );
 }
 

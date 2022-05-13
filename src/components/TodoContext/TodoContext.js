@@ -43,11 +43,11 @@ function TodoProvider(props){
     
       };  
 
-    //  VER ESTO MAÑANA 
-      const deleteAllTodo = (text) => {
-        const todoIndex = todos.findIndex(todo => todo.text === text);
-        const newTodos = [...todos];
-        newTodos.splice(todoIndex, 1);
+    // new function delete all list todo 
+      const deleteAllTodo = () => {
+        //const todoIndex = todos.findIndex(todo => todo.text === text);
+        const newTodos = [];
+        
         saveTodos(newTodos);
     
       };  
@@ -78,6 +78,7 @@ function TodoProvider(props){
             addTodo,
             openModal,
             setOpenModal,
+            deleteAllTodo,
         }}>
             {props.children}
         </TodoContext.Provider>
