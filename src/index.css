@@ -16,10 +16,25 @@ body {
 
 .contenedor{
   width: 50%;
-  margin: 50px auto;
+  margin: 1% auto;
   background-color: #8BC6EC;
         border: 5px solid #e2e2ee;
   height: 50%;
   border-radius:25px;
   padding: 0px 9px 0px 9px;
+}
+
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+
+  .contenedor{
+    width: 95%;
+    margin: 1% auto;
+    background-color: #8BC6EC;
+          border: 5px solid #e2e2ee;
+    height: 95%;
+    border-radius:25px;
+    padding: 0px 9px 0px 9px;
+  }
 }
