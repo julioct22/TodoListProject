@@ -12,6 +12,11 @@ import { TodosLoading } from "./components/TodosLoading/TodosLoading";
 import { EmptyTodos } from "./components/EmptyTodos/EmptyTodos"
 import {DeleteAllTodoButton} from "./components/DeleteAllTodoButton/DeleteAllTodoButton"
 import {Footer} from './components/Footer/Footer'; 
+import {NavBar} from './components/NavBar/NavBar'; 
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+
   function AppUI() {
     const {
         error,
@@ -28,13 +33,17 @@ import {Footer} from './components/Footer/Footer';
 
     return (
     <React.Fragment>
+    < NavBar/>
     <div className="contenedor">
+    
     <TodoCounter/>
+    {/* <p className="instrucciones"> Para agregar una tarea a la lista utiliza el boton azul con el símbolo de + </p> */}
     <TodoSearch />
-   
+    
           <TodoList>
             {error && <TodosError error={error}/>}
             {loading &&  <TodosLoading/>}
+            <br/>
             {(!loading && !searchedTodos.length) && <EmptyTodos/>}
             
             {searchedTodos.map(todo => (
@@ -67,6 +76,10 @@ import {Footer} from './components/Footer/Footer';
     />
     <Footer/>
     </div>
+    
+ 
+
+
   </React.Fragment>
      ); 
   }

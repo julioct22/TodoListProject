@@ -1,5 +1,6 @@
 import React from "react";
 import './CreateTodoButton.css'
+import { IoAdd } from "react-icons/io5";
 
 function CreateTodoButton(props){
 
@@ -11,7 +12,8 @@ function CreateTodoButton(props){
         className="CreateTodoButton"
         onClick={onClickButton}
       >
-        +
+      
+       <IoAdd/>
       </button>
     );
 }
