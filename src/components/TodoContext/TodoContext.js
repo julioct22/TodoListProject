@@ -46,8 +46,9 @@ function TodoProvider(props){
     // new function delete all list todo 
       const deleteAllTodo = () => {
         //const todoIndex = todos.findIndex(todo => todo.text === text);
+        console.log("BORRANDO TODA LA LISTA"); 
         const newTodos = [];
-        
+        console.log(newTodos) 
         saveTodos(newTodos);
     
       };  

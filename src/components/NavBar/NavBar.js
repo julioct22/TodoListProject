@@ -35,10 +35,10 @@ function NavBar(){
                     <Nav className="justify-content-end flex-grow-1 pe-3">
                     <Nav.Link href="#action1">Acerca de</Nav.Link>
                     {/* <Nav.Link href="#action2">Link</Nav.Link> */}
-                    
+                    </Nav>
+                    <Nav className="flex-grow-1 pe-3">
                     <h3 className="NavBarFooter" >Hecho con < AiTwotoneHeart color="red"/> a partir de curso de <SiPlatzi color="green" />  
                     <p><CgCopyright/>{new Date().getFullYear()}</p> {/* Outputs 2020 */}</h3> 
-                   
                     </Nav>
                   
                 </Offcanvas.Body>

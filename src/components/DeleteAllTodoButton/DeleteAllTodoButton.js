@@ -5,14 +5,15 @@ import { GrTrash } from "react-icons/gr";
 function DeleteAllTodoButton(props){
 
     const onClickButton=()=>{
-        props.setOpenModal(prevState=>!prevState);
+        console.log('You clicked submit. - tamos borrando');
+        props.deleteAllTodo(prevState=>!prevState);
     };
+
+
     return (
         <button
         className="DeleteAllTodoButton"
-        onClick={onClickButton}
-      
-        
+        onClick={onClickButton}       
       >
       < GrTrash />
       </button>
